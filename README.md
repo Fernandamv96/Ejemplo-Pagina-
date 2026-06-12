@@ -8,22 +8,10 @@ Plantilla de inicio limpia con HTML, CSS y JavaScript puro. Sin frameworks ni de
 
 ```
 proyecto-ejemplo/
-├── index.html              # Entrada principal de la página
-├── script.js               # (legacy, reemplazado por src/)
-├── style.css               # (legacy, reemplazado por src/)
-├── README.md               # Este archivo
-└── src/
-    ├── css/
-    │   └── style.css       # Estilos: variables, layout, componentes
-    ├── js/
-    │   ├── main.js         # Punto de entrada, importa módulos
-    │   ├── utils.js        # Helpers: $(), setVisible(), anioActual()
-    │   ├── nav.js          # Hero y scroll suave
-    │   └── contacto.js     # Validación y respuesta del formulario
-    ├── components/         # Componentes HTML reutilizables (para crecer)
-    └── assets/
-        ├── img/            # Imágenes del proyecto
-        └── icons/          # Íconos SVG u otros
+├── index.html   # Estructura y contenido de la página
+├── style.css    # Estilos: variables, layout, componentes
+├── script.js    # Lógica del cliente (eventos, DOM)
+└── README.md    # Este archivo
 ```
 
 ---
@@ -31,10 +19,10 @@ proyecto-ejemplo/
 ## Cómo usar
 
 1. Descarga o clona la carpeta.
-2. Abre `index.html` directamente con **Live Server** en VS Code.
+2. Abre `index.html` directamente en el navegador — no requiere servidor.
 3. Modifica los archivos según tu proyecto.
 
-> Los archivos JS usan ES Modules (`import/export`), por eso se necesita un servidor local — no funcionan con `file://` directamente.
+> Para desarrollo con recarga automática puedes usar la extensión **Live Server** de VS Code.
 
 ---
 
@@ -42,45 +30,43 @@ proyecto-ejemplo/
 
 ### `index.html`
 - Estructura semántica: `<header>`, `<main>`, `<section>`, `<footer>`
-- Carga `src/css/style.css` y `src/js/main.js` como módulo ES
+- Navegación con anclas a secciones
+- Sección hero con botón de llamada a la acción
+- Grilla de tarjetas informativas
+- Formulario de contacto simple
+- Enlace a `style.css` y `script.js`
 
-### `src/css/style.css`
+### `style.css`
 - Variables CSS (`--color-*`, `--radio`, `--sombra`, etc.)
-- Reset básico, header sticky, grilla responsiva
+- Reset básico con `box-sizing: border-box`
+- Header sticky con efecto `backdrop-filter`
+- Grilla responsiva con `grid` y `auto-fit`
 - Breakpoint para móvil a 520 px
 
-### `src/js/main.js`
-- Punto de entrada — importa y llama a los módulos
-
-### `src/js/utils.js`
-- `$()` helper para `querySelector`
-- `setVisible()` para mostrar/ocultar elementos
-- `anioActual()` retorna el año actual
-
-### `src/js/nav.js`
-- Scroll suave al botón del hero
-
-### `src/js/contacto.js`
-- Validación del formulario con mensaje de respuesta simulado
+### `script.js`
+- Módulo envuelto en `DOMContentLoaded`
+- Función helper `$()` para `querySelector`
+- Año dinámico en el footer
+- Scroll suave al hacer clic en el botón del hero
+- Validación y respuesta simulada en el formulario (con `setTimeout`)
+- Envío con la tecla Enter
 
 ---
 
 ## Personalización rápida
 
-| Qué cambiar          | Dónde                            |
-|----------------------|----------------------------------|
-| Colores principales  | Variables `--color-*` en CSS     |
-| Tipografía           | Variable `--fuente` en CSS       |
-| Textos y secciones   | Directamente en `index.html`     |
-| Lógica de eventos    | Módulos en `src/js/`             |
-| Imágenes             | Carpeta `src/assets/img/`        |
+| Qué cambiar          | Dónde                          |
+|----------------------|--------------------------------|
+| Colores principales  | Variables `--color-*` en CSS   |
+| Tipografía           | Variable `--fuente` en CSS     |
+| Textos y secciones   | Directamente en `index.html`   |
+| Lógica de eventos    | Funciones en `script.js`       |
 
 ---
 
 ## Requisitos
 
-- Navegador moderno con soporte para ES Modules (Chrome, Firefox, Edge, Safari).
-- Servidor local para los módulos JS — se recomienda **Live Server** en VS Code.
+- Ninguno. Solo un navegador moderno (Chrome, Firefox, Edge, Safari).
 
 ---
 
