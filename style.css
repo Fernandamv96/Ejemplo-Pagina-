@@ -1,0 +1,219 @@
+/* =====================
+   Variables y Reset
+   ===================== */
+:root {
+  --color-fondo:    #0f1117;
+  --color-surface:  #1a1d27;
+  --color-borde:    #2e3244;
+  --color-acento:   #4f8ef7;
+  --color-acento2:  #7c5cfc;
+  --color-texto:    #e4e6f0;
+  --color-suave:    #8890aa;
+
+  --radio:    10px;
+  --sombra:   0 4px 24px rgba(0,0,0,0.35);
+  --fuente:   'Segoe UI', system-ui, sans-serif;
+  --transicion: 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fuente);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* =====================
+   Header
+   ===================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15,17,23,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  background: linear-gradient(90deg, var(--color-acento), var(--color-acento2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+nav a {
+  color: var(--color-suave);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  transition: color var(--transicion);
+}
+
+nav a:hover { color: var(--color-texto); }
+
+/* =====================
+   Hero
+   ===================== */
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-suave);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+/* =====================
+   Botones
+   ===================== */
+button {
+  cursor: pointer;
+  font-family: var(--fuente);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: var(--radio);
+  background: linear-gradient(135deg, var(--color-acento), var(--color-acento2));
+  color: #fff;
+  transition: opacity var(--transicion), transform var(--transicion);
+}
+
+button:hover  { opacity: 0.88; transform: translateY(-1px); }
+button:active { transform: translateY(0); }
+
+/* =====================
+   Cards
+   ===================== */
+.cards {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 4rem 1.5rem;
+}
+
+.cards h2,
+.contacto h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.card-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.75rem 1.5rem;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.card:hover {
+  border-color: var(--color-acento);
+  box-shadow: var(--sombra);
+}
+
+.card-icon { font-size: 1.8rem; display: block; margin-bottom: 0.75rem; }
+.card h3   { font-size: 1rem; margin-bottom: 0.5rem; }
+.card p    { font-size: 0.88rem; color: var(--color-suave); }
+
+/* =====================
+   Contacto / Formulario
+   ===================== */
+.contacto {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-surface);
+  color: var(--color-texto);
+  font-family: var(--fuente);
+  font-size: 0.95rem;
+  transition: border-color var(--transicion);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+.respuesta {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--color-acento);
+}
+
+.oculto { display: none; }
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-suave);
+  border-top: 1px solid var(--color-borde);
+}
+
+/* =====================
+   Responsivo
+   ===================== */
+@media (max-width: 520px) {
+  .form-group { flex-direction: column; }
+  nav a:first-child { margin-left: 0; }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Ejemplo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <span class="logo">EjemploWeb</span>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca">Acerca</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <h1>Hola, Mundo</h1>
+      <p>Una página de ejemplo limpia y funcional lista para modificar.</p>
+      <button id="btn-principal">Comenzar</button>
+    </section>
+
+    <section id="acerca" class="cards">
+      <h2>¿Qué incluye?</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-icon">📄</span>
+          <h3>index.html</h3>
+          <p>Estructura semántica con header, secciones y footer.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎨</span>
+          <h3>style.css</h3>
+          <p>Variables CSS, reset básico y componentes reutilizables.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">⚙️</span>
+          <h3>script.js</h3>
+          <p>Lógica modular con eventos y manipulación del DOM.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Envía un mensaje</h2>
+      <div class="form-group">
+        <input id="input-nombre" type="text" placeholder="Tu nombre" />
+        <button id="btn-enviar">Enviar</button>
+      </div>
+      <p id="mensaje-respuesta" class="respuesta oculto"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Proyecto Ejemplo &mdash; <span id="anio"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
