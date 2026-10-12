@@ -2,6 +2,8 @@
 
 # EjemploWeb — Plantilla web estática
 
+[![CI](https://github.com/Fernandamv96/Ejemplo-Pagina-/actions/workflows/ci.yml/badge.svg)](https://github.com/Fernandamv96/Ejemplo-Pagina-/actions/workflows/ci.yml)
+
 Plantilla profesional con HTML, CSS y JavaScript puro. Sin frameworks ni dependencias externas.
 
 <a href="https://ejemplo-pagina-n9tv.vercel.app">
@@ -15,6 +17,12 @@ Plantilla profesional con HTML, CSS y JavaScript puro. Sin frameworks ni depende
 </div>
 
 ---
+
+![Vista de la plantilla](docs/preview.png)
+
+## ¿Qué problema resuelve?
+
+Una base limpia para empezar sitios estáticos sin frameworks: estructura semántica, estilos organizados y JavaScript mínimo, lista para personalizar y desplegar.
 
 ## Estructura de archivos
 
@@ -84,6 +92,16 @@ proyecto-ejemplo/
 
 ---
 
+## 🔒 Calidad y seguridad
+
+- CI en cada push y PR: `html-validate` + ESLint (`script.js`), además de CodeQL, Dependabot y gitleaks en pre-commit.
+- Para reportar vulnerabilidades, mira [SECURITY.md](SECURITY.md).
+
+## Qué aprendí
+
+- A partir de una base semántica y accesible antes de agregar estilos.
+- A organizar CSS con variables para que personalizar sea cambiar pocos valores.
+
 ## Licencia
 
-Uso libre — sin restricciones.
+[MIT](LICENSE) © 2026 Fernanda (Fernandamv96)
