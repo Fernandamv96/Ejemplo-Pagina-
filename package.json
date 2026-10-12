@@ -1,0 +1,17 @@
+{
+  "name": "ejemplo-pagina",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sitio estático (sin build). package.json solo para herramientas de lint.",
+  "scripts": {
+    "lint": "html-validate \"index.html\"  && eslint .",
+    "start": "npx --yes serve@14 -l 8000 ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "globals": "^15.15.0",
+    "html-validate": "^9.7.1"
+  }
+}
